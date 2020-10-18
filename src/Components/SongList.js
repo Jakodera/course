@@ -7,7 +7,7 @@ class SongList extends Component{
         return this.props.songs.map((song)=>{
             return(
                 <div key={song.title}>
-                    <button onClick= {() =>this.props.selectedSong(song)}>
+                    <button onClick= {() =>this.props.selectSong(song)}>
                         Select
                     </button>
 
