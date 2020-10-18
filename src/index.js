@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const App = ()=>{
-  console.log('hello first component')
-  return (
-  <div>
-    <p>Hello React</p>
-  </div>
-  )
-}
+import App from './Components/App'
+import {Provider } from 'react-redux';
+import {createStore } from 'redux';
+import reducers from './Reducers'
 
 
-ReactDOM.render(<App />,document.getElementById('root'));
+
+ReactDOM.render(
+  <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>,
+document.querySelector('#root'));
